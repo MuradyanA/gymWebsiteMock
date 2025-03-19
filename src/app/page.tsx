@@ -12,6 +12,7 @@ export const righteous = Righteous({
   variable: "--font-righteous",
 });
 
+
 export default function Home() {
   return (
     <div>
@@ -57,26 +58,22 @@ export default function Home() {
         </div>
         <div className="bg-black flex justify-center">
           <div className="flex flex-col items-center w-fit">
-            {/* Title */}
             <div className="justify-start items-start w-full">
               <p
-                className={`text-start text-6xl ${righteous.variable} mt-10 ml-13`}
+                className={`text-start sm:text-6xl text-2xl tracking-widest ${righteous.variable} mt-10 sm:ml-13`}
                 style={{ fontFamily: "var(--font-righteous)" }}
               >
                 WHY CHOOSE US
               </p>
             </div>
 
-            {/* Training Info - Stack vertically on small screens */}
             <div className="flex flex-col sm:flex-row gap-4 mt-5">
-              {/* Left Chevron - Hidden on small screens */}
               <div className="hidden sm:flex justify-center items-center">
                 <button className="cursor-pointer h-fit border 1px rounded-full p-1 hover:bg-white hover:text-black duration-300">
                   <ChevronLeftIcon />
                 </button>
               </div>
 
-              {/* Training Info Cards */}
               <TrainingInfoEntity
                 imgPath="/dumbbell.png"
                 header="MUSCLES BUILDING"
@@ -93,15 +90,12 @@ export default function Home() {
                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit."
               />
 
-              {/* Right Chevron - Hidden on small screens */}
               <div className="hidden sm:flex justify-center items-center">
                 <button className="cursor-pointer h-fit border 1px rounded-full p-1 hover:bg-white hover:text-black duration-300">
                   <ChevronRightIcon />
                 </button>
               </div>
             </div>
-
-            {/* Carousel Dots - Hidden on small screens */}
             <div className="hidden sm:flex justify-center mt-4 gap-3">
               <div className="bg-white w-1 h-1 rounded-full"></div>
               <div className="bg-gray-500 w-1 h-1 rounded-full"></div>
@@ -120,9 +114,9 @@ export default function Home() {
                 ABOUT OUR GYM
               </p>
             </div>
-            <div className="relative bg-[url('/guyWithBarbell.png')] rounded-lg bg-cover bg-center bg- sm:w-[900px] sm:h-[600px] overflow-hidden w-[350px] h-[300px]">
+            <div className="relative bg-[url('/guyWithBarbell.png')] rounded-lg bg-cover bg-center bg- sm:w-[900px] sm:h-[600px] overflow-hidden w-[300px] h-[300px]">
               <button
-                className={`${righteous.variable} bg-[#d9fa58] absolute bottom-4 left-4 p-2 text-lg tracking-wide rounded-md font-bold px-7 py-2 text-black cursor-pointer`}
+                className={`${righteous.variable} bg-[#d9fa58] absolute bottom-4 left-4 p-2 text-lg tracking-wide rounded-md font-bold px-10 py-2 text-black cursor-pointer`}
                 style={{ fontFamily: "var(--font-righteous)" }}
               >
                 10 YEARS

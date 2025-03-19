@@ -11,7 +11,6 @@ export default function Navbar() {
 
   return (
     <div className="flex justify-between items-center p-6">
-      {/* Logo */}
       <div className="flex-1 flex justify-center">
         <p
           className={`text-3xl font-bold tracking-widest`}
@@ -21,7 +20,6 @@ export default function Navbar() {
         </p>
       </div>
 
-      {/* Navigation Links - Hidden on small screens */}
       <div className="hidden sm:flex flex-1 justify-center items-center gap-12 text-md font-sans">
         <Link href="/">Home</Link>
         <Link href="/shop">Shop</Link>
@@ -29,7 +27,6 @@ export default function Navbar() {
         <Link href="/contact">Contact</Link>
       </div>
 
-      {/* Icons & Burger Menu (Burger is always visible) */}
       <div className="flex-1 flex justify-center items-center gap-3 relative">
         <SearchIcon />
         <div className="relative">
@@ -41,7 +38,6 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Burger Menu - Always Visible */}
         <div className="flex">
           <BurgerMenuIcon />
         </div>
