@@ -101,7 +101,7 @@ export default function Home() {
         </div>
 
         <div className="bg-black overflow-hidden">
-          <div className="flex flex-col items-center w-full h-auto mb-10 sm:ml-3">
+          <div className="flex flex-col items-center w-full h-auto my-25 sm:ml-3">
             <div className="relative w-[300px] h-[100px] sm:w-[600px] sm:h-[120px] sm:mr-80">
               <p
                 className={`${righteous.className} text-lg sm:text-6xl absolute bottom-0 left-0 mb-4 text-left w-full`}
