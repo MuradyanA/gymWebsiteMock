@@ -1,23 +1,19 @@
-import { Righteous } from "next/font/google";
+
 import ArrowToTopRightIcon from "./icons/ArrowToTopRightIcon";
 import ChevronLeftIcon from "./icons/ChevronLeftIcon";
 import ChevronRightIcon from "./icons/ChevronRightIcon";
 import TrainingInfoEntity from "./TrainingInfoEntity";
 import Link from "next/link";
 import NavigationButton from "./navigationButton";
+import { righteous } from "./fonts";
 
-export const righteous = Righteous({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-righteous",
-});
 
 
 export default function Home() {
   return (
     <div>
       <div className="flex flex-col justify-center items-center mt-[10%]">
-        <div className={`${righteous.variable} text-white`} style={{ fontFamily: "var(--font-righteous)" }}>
+        <div className={`${righteous.className} text-white`}>
           <p className="text-3xl sm:text-8xl text-center tracking-widest">WORK WITH</p>
           <p className="text-3xl sm:text-8xl text-center tracking-widest">PROFESSIONALS</p>
         </div>
@@ -30,8 +26,8 @@ export default function Home() {
         <div className="mt-5 flex flex-col sm:flex-row items-center gap-4">
           <Link
             href={""}
-            className={`${righteous.variable} bg-[#d9fa58] text-sm tracking-wide rounded-full font-bold px-7 py-2 text-black shadow-[0_0_20px_#d9fa58] cursor-pointer`}
-            style={{ fontFamily: "var(--font-righteous)" }}
+            className={`${righteous.className} bg-[#d9fa58] text-sm tracking-wide rounded-full font-bold px-7 py-2 text-black shadow-[0_0_20px_#d9fa58] cursor-pointer`}
+            
           >
             START NOW
           </Link>
@@ -49,8 +45,8 @@ export default function Home() {
 
       <div className="mt-10 w-full">
         <div
-          className={`h-10 sm:h-full text-center bg-[#d9fa58] overflow-hidden p-1 ${righteous.variable} `}
-          style={{ fontFamily: "var(--font-righteous)" }}
+          className={`h-10 sm:h-full text-center bg-[#d9fa58] overflow-hidden p-1 ${righteous.className} `}
+          
         >
           <span className="text-black font-bold text-3xl text-center tracking-wide">
             CONVINIENT LOCATION & SCHEDULE * DRAWING UP AN INDIVIDUAL TRAINING PROGRAM WITH BEST PROFESSIONAL APPROACH
@@ -60,8 +56,8 @@ export default function Home() {
           <div className="flex flex-col items-center w-fit">
             <div className="justify-start items-start w-full">
               <p
-                className={`text-start sm:text-6xl text-2xl tracking-widest ${righteous.variable} mt-10 sm:ml-13`}
-                style={{ fontFamily: "var(--font-righteous)" }}
+                className={`text-start sm:text-6xl text-2xl tracking-widest ${righteous.className} mt-10 sm:ml-13`}
+                
               >
                 WHY CHOOSE US
               </p>
@@ -108,16 +104,16 @@ export default function Home() {
           <div className="flex flex-col items-center w-full h-auto mb-10 sm:ml-3">
             <div className="relative w-[300px] h-[100px] sm:w-[600px] sm:h-[120px] sm:mr-80">
               <p
-                className={`${righteous.variable} text-lg sm:text-6xl absolute bottom-0 left-0 mb-4 text-left w-full`}
-                style={{ fontFamily: "var(--font-righteous)" }}
+                className={`${righteous.className} text-lg sm:text-6xl absolute bottom-0 left-0 mb-4 text-left w-full`}
+                
               >
                 ABOUT OUR GYM
               </p>
             </div>
             <div className="relative bg-[url('/guyWithBarbell.png')] rounded-lg bg-cover bg-center bg- sm:w-[900px] sm:h-[600px] overflow-hidden w-[300px] h-[300px]">
               <button
-                className={`${righteous.variable} bg-[#d9fa58] absolute bottom-4 left-4 p-2 text-lg tracking-wide rounded-md font-bold px-10 py-2 text-black cursor-pointer`}
-                style={{ fontFamily: "var(--font-righteous)" }}
+                className={`${righteous.className} bg-[#d9fa58] absolute bottom-4 left-4 p-2 text-lg tracking-wide rounded-md font-bold px-10 py-2 text-black cursor-pointer`}
+                
               >
                 10 YEARS
               </button>

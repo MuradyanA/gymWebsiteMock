@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import SearchIcon from "./icons/SearchIcon";
 import BurgerMenuIcon from "./icons/BurgerMenuIcon";
 import MessageIcon from "./icons/MessageIcon";
-import { righteous } from "./page";
+import { righteous } from "./fonts";
 
 export default function Navbar() {
   const [messageCount, setMessageCount] = useState(4);
@@ -13,8 +13,7 @@ export default function Navbar() {
     <div className="flex justify-between items-center p-6">
       <div className="flex-1 flex justify-center">
         <p
-          className={`text-3xl font-bold tracking-widest`}
-          style={{ fontFamily: "var(--font-righteous)" }}
+          className={`${righteous.className} text-3xl font-bold tracking-widest`}
         >
           GYMTEAM
         </p>
