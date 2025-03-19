@@ -1,103 +1,136 @@
-import Image from "next/image";
+import { Righteous } from "next/font/google";
+import ArrowToTopRightIcon from "./icons/ArrowToTopRightIcon";
+import ChevronLeftIcon from "./icons/ChevronLeftIcon";
+import ChevronRightIcon from "./icons/ChevronRightIcon";
+import TrainingInfoEntity from "./TrainingInfoEntity";
+import Link from "next/link";
+import NavigationButton from "./navigationButton";
+
+export const righteous = Righteous({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-righteous",
+});
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <div className="flex flex-col justify-center items-center mt-[10%]">
+        <div className={`${righteous.variable} text-white`} style={{ fontFamily: "var(--font-righteous)" }}>
+          <p className="text-3xl sm:text-8xl text-center tracking-widest">WORK WITH</p>
+          <p className="text-3xl sm:text-8xl text-center tracking-widest">PROFESSIONALS</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div className="w-[80%] text-sm sm:w-[25%] sm:text-lg sm:h-auto text-center font-thin opacity-65">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quasi, quaerat eum ipsam molestiae
+            earum et
+          </p>
+        </div>
+        <div className="mt-5 flex flex-col sm:flex-row items-center gap-4">
+          <Link
+            href={""}
+            className={`${righteous.variable} bg-[#d9fa58] text-sm tracking-wide rounded-full font-bold px-7 py-2 text-black shadow-[0_0_20px_#d9fa58] cursor-pointer`}
+            style={{ fontFamily: "var(--font-righteous)" }}
+          >
+            START NOW
+          </Link>
+          <NavigationButton text="LEARN MORE" />
+        </div>
+        <div className="flex m-10 gap-3">
+          <button className="cursor-pointer border 1px border-white rounded-full p-1 hover:bg-white hover:text-black duration-300">
+            <ChevronLeftIcon />
+          </button>
+          <button className="cursor-pointer border 1px border-white rounded-full p-1 hover:bg-white hover:text-black duration-300">
+            <ChevronRightIcon />
+          </button>
+        </div>
+      </div>
+
+      <div className="mt-10 w-full">
+        <div
+          className={`h-10 sm:h-full text-center bg-[#d9fa58] overflow-hidden p-1 ${righteous.variable} `}
+          style={{ fontFamily: "var(--font-righteous)" }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <span className="text-black font-bold text-3xl text-center tracking-wide">
+            CONVINIENT LOCATION & SCHEDULE * DRAWING UP AN INDIVIDUAL TRAINING PROGRAM WITH BEST PROFESSIONAL APPROACH
+          </span>
+        </div>
+        <div className="bg-black flex justify-center">
+          <div className="flex flex-col items-center w-fit">
+            {/* Title */}
+            <div className="justify-start items-start w-full">
+              <p
+                className={`text-start text-6xl ${righteous.variable} mt-10 ml-13`}
+                style={{ fontFamily: "var(--font-righteous)" }}
+              >
+                WHY CHOOSE US
+              </p>
+            </div>
+
+            {/* Training Info - Stack vertically on small screens */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-5">
+              {/* Left Chevron - Hidden on small screens */}
+              <div className="hidden sm:flex justify-center items-center">
+                <button className="cursor-pointer h-fit border 1px rounded-full p-1 hover:bg-white hover:text-black duration-300">
+                  <ChevronLeftIcon />
+                </button>
+              </div>
+
+              {/* Training Info Cards */}
+              <TrainingInfoEntity
+                imgPath="/dumbbell.png"
+                header="MUSCLES BUILDING"
+                text="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              />
+              <TrainingInfoEntity
+                imgPath="/expander.jpg"
+                header="MUSCLES BUILDING"
+                text="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              />
+              <TrainingInfoEntity
+                imgPath="/bottle.png"
+                header="MUSCLES BUILDING"
+                text="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              />
+
+              {/* Right Chevron - Hidden on small screens */}
+              <div className="hidden sm:flex justify-center items-center">
+                <button className="cursor-pointer h-fit border 1px rounded-full p-1 hover:bg-white hover:text-black duration-300">
+                  <ChevronRightIcon />
+                </button>
+              </div>
+            </div>
+
+            {/* Carousel Dots - Hidden on small screens */}
+            <div className="hidden sm:flex justify-center mt-4 gap-3">
+              <div className="bg-white w-1 h-1 rounded-full"></div>
+              <div className="bg-gray-500 w-1 h-1 rounded-full"></div>
+              <div className="bg-gray-500 w-1 h-1 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-black overflow-hidden">
+          <div className="flex flex-col items-center w-full h-auto mb-10 sm:ml-3">
+            <div className="relative w-[300px] h-[100px] sm:w-[600px] sm:h-[120px] sm:mr-80">
+              <p
+                className={`${righteous.variable} text-lg sm:text-6xl absolute bottom-0 left-0 mb-4 text-left w-full`}
+                style={{ fontFamily: "var(--font-righteous)" }}
+              >
+                ABOUT OUR GYM
+              </p>
+            </div>
+            <div className="relative bg-[url('/guyWithBarbell.png')] rounded-lg bg-cover bg-center bg- sm:w-[900px] sm:h-[600px] overflow-hidden w-[350px] h-[300px]">
+              <button
+                className={`${righteous.variable} bg-[#d9fa58] absolute bottom-4 left-4 p-2 text-lg tracking-wide rounded-md font-bold px-7 py-2 text-black cursor-pointer`}
+                style={{ fontFamily: "var(--font-righteous)" }}
+              >
+                10 YEARS
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
