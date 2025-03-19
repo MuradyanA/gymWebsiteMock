@@ -20,10 +20,10 @@ export default function Navbar() {
       </div>
 
       <div className="hidden sm:flex flex-1 justify-center items-center gap-12 text-md font-sans">
-        <Link href="/">Home</Link>
-        <Link href="/shop">Shop</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/contact">Contact</Link>
+        <Link className="hover:text-gray-400 duration-300" href="/">Home</Link>
+        <Link className="hover:text-gray-400 duration-300" href="/shop">Shop</Link>
+        <Link className="hover:text-gray-400 duration-300" href="/blog">Blog</Link>
+        <Link className="hover:text-gray-400 duration-300" href="/contact">Contact</Link>
       </div>
 
       <div className="flex-1 flex justify-center items-center gap-3 relative">

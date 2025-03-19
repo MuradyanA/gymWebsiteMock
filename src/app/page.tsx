@@ -56,7 +56,7 @@ export default function Home() {
           <div className="flex flex-col items-center w-fit">
             <div className="justify-start items-start w-full">
               <p
-                className={`text-start sm:text-6xl text-2xl tracking-widest ${righteous.className} mt-10 sm:ml-13`}
+                className={`text-start sm:text-6xl text-2xl tracking-widest ${righteous.className} mt-10 sm:ml-13 w-full`}
                 
               >
                 WHY CHOOSE US
