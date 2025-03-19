@@ -12,7 +12,7 @@ interface IData {
 
 export default function TrainingInfoEntity({ imgPath, header, text }: IData) {
   return (
-    <div className="p-2 text-white bg-[#212121] rounded-md w-72 hover:bg-[#d9fa58] hover:text-black duration-200 group">
+    <div className="p-2 text-white bg-[#212121] rounded-md w-72 hover:bg-[#d9fa58] hover:text-black duration-500 group">
       <img className="w-23 h-23" src={imgPath} />
       <div className="pl-5">
         <p className={`${righteous.className} text-lg`} >
@@ -23,8 +23,8 @@ export default function TrainingInfoEntity({ imgPath, header, text }: IData) {
           <div className="mt-3">
             <NavigationButton text="LEARN MORE" />
           </div>
-          <div className="mr-5 bg-[#d9fa58] p-2 rounded-full group-hover:bg-black duration-200">
-            <BoltIcon stylings="text-black group-hover:text-gray-300 duration-200" />
+          <div className="mr-5 bg-[#d9fa58] p-2 rounded-full group-hover:bg-black duration-500">
+            <BoltIcon stylings="text-black group-hover:text-gray-300 duration-500" />
           </div>
         </div>
       </div>
